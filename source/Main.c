@@ -5,27 +5,33 @@ int drink[4] = { 50, 30, 20, 40 };
 int select[4], flag=1, flag1, flag2, cnt, money1, money2;
 int main()
 {
+	while(flag)
+	{
+		printf("南亞快餐店點餐系統\n");
+		printf("是否點選主餐? 1是 0否:");
+		scanf_s("%d", &flag1);
+		money1 = 0;
+		money2 = 0;
 
-			printf("主餐:\n");
-			printf("1.炒飯(80元) 請選擇數量:");
-			scanf_s("%d", &select[0]);
-			printf("\n");
-			printf("2.漢堡(50元) 請選擇數量:");
-			scanf_s("%d", &select[1]);
-			printf("\n");
-			printf("3.起司堡(40元) 請選擇數量:");
-			scanf_s("%d", &select[2]);
-			printf("\n");
-			printf("4.薯條(30元) 請選擇數量:");
-			scanf_s("%d", &select[3]);
-			printf("\n");
-			for (cnt = 0; cnt <= 3; cnt++)
-			{
-				money1 += eat[cnt] * select[cnt];  //money1 = money1 + eat[cnt] * select[cnt];
-			}
-			printf("目前消費:%d元\n", money1);
+		if (flag1)
+		{
+			
+		}
+		else
+		{
 			printf("是否點選附餐? 1是 0否:");
 			scanf_s("%d", &flag2);
+		}
 		
+		if (flag2)
+		{
+		
+		}
+		else
+		{
+			if (flag1 == 0) { flag = 0; }
+			printf("消費總額:%d元\n", money1 + money2);
+		}
+	}
 	system("PAUSE");
 }
